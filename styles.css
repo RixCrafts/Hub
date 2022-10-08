@@ -94,7 +94,7 @@ main>.blog-container {
     background-color: red;
     width: 150%;
     height: 250%;
-    background-image: url("Resources/Blog\ bg.png");
+    background-image: url("resources/Blog\ bg.png");
     background-size: contain;
     transform: rotate(30deg);
     top: -10%;
