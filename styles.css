@@ -1,6 +1,7 @@
 :root {
     --body-bg: #1a202c;
     --logo-shadow: #b3e5fc45;
+    --dev-blue: #00aeff;
 }
 
 * {
@@ -78,7 +79,7 @@ main>.blog-container {
 
 @keyframes blog-bg-animation {
     from {
-        top: -10%;
+        top: -35%;
         left: -55%;
     }
 
@@ -170,6 +171,8 @@ main>.business-container:hover {
     opacity: 60%;
 }
 
+/* Development */
+
 main>.development-container {
     grid-row: 2;
     grid-column: span 2;
@@ -178,6 +181,9 @@ main>.development-container {
     border-radius: 250px 250px 0 0;
     transition: all .5s linear;
     animation: development-container-animation 4s linear infinite;
+    /* for items */
+    color: var(--dev-blue);
+    font-family: consolas, monospace, sans-serif, serif;
 }
 
 @keyframes development-container-animation {
@@ -199,7 +205,104 @@ main>.development-container:hover {
     border-top: 5px solid rgb(2, 88, 128);
     box-shadow: inset 0 75px 50px #1a202c;
     cursor: pointer;
+
+    /* for items */
+    color: var(--body-bg);
 }
+
+.development-container > .iam{
+    position: relative;
+    top: 18%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.developer{
+    position: relative;
+    top: 35%;
+    left: 5%;
+    display: flex;
+    width: 10px;   
+    height: 35px;
+    overflow: hidden; 
+    animation: 
+        typingDev 3s steps(11) forwards,
+        typingDevBack 2s steps(7) 4s forwards;
+}
+
+.developer::after{
+    content: '...';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--dev-blue);
+    animation: blinkCursor 1s linear infinite;
+    animation-delay: 2.5s;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes typingDev{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 250px;
+    }
+}
+
+@keyframes typingDevBack {
+    0%{
+        width: 250px;
+    }
+    40%{
+        width: 112px;
+    }
+    60%{
+        width: 112px;
+    }
+    100%{
+        width: 269px;
+    }
+}
+
+
+@keyframes blinkCursor {
+    0%, 75%{
+        opacity: 1;
+    }
+    76%, 100%{
+        opacity: 0;
+    }
+}
+
+.developer h1{
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    white-space: nowrap;
+}
+/* Entrepreneur */
+
+.entrepreneur{
+    position: relative;
+    top: 65%;
+    left: 10%;
+    font-size: 1.3rem;
+}
+
+.blogger{
+    position: relative;
+    top: 40%;
+    left: 80%;
+    font-size: 1.3rem;
+}
+
+
+/* Logo */
 
 main>.logo-container {
     width: 150px;
