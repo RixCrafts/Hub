@@ -1,3 +1,3 @@
-# Hub
+# RixCrafts Hub
 
-Starting point to all my work and porjects.
+Starting point to all my work, projects and online ventures
