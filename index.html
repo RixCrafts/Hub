@@ -5,44 +5,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RixCrafts Hub</title>
+    <!-- External Resources -->
 
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- ------------------ -->
+    <!-- Local Resources -->
+    <link rel="stylesheet" href="style.css">
+    <!-- --------------- -->
+    <title>RixCrafts Hub</title>
 </head>
 
 <body>
+    <header>
+        <div class="curve-bg">
+            <svg class="header-svg green-svg" id="visual" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path
+                    d="M0 15L10.7 19.3C21.3 23.7 42.7 32.3 64.2 35.8C85.7 39.3 107.3 37.7 128.8 35C150.3 32.3 171.7 28.7 193 23.5C214.3 18.3 235.7 11.7 257 9C278.3 6.3 299.7 7.7 321.2 10.2C342.7 12.7 364.3 16.3 385.8 19.8C407.3 23.3 428.7 26.7 450 33C471.3 39.3 492.7 48.7 514.2 47.3C535.7 46 557.3 34 578.8 25.5C600.3 17 621.7 12 643 10.2C664.3 8.3 685.7 9.7 707 9.5C728.3 9.3 749.7 7.7 771.2 5.8C792.7 4 814.3 2 835.8 8.8C857.3 15.7 878.7 31.3 889.3 39.2L900 47"
+                    fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#88FF00" stroke-width="2"></path>
+            </svg>
+            <svg class="header-svg blue-svg" id="visual" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path
+                    d="M0 58L10.7 51.8C21.3 45.7 42.7 33.3 64.2 25C85.7 16.7 107.3 12.3 128.8 17C150.3 21.7 171.7 35.3 193 37C214.3 38.7 235.7 28.3 257 24.2C278.3 20 299.7 22 321.2 26.5C342.7 31 364.3 38 385.8 34.5C407.3 31 428.7 17 450 15.3C471.3 13.7 492.7 24.3 514.2 31.8C535.7 39.3 557.3 43.7 578.8 47.5C600.3 51.3 621.7 54.7 643 49.3C664.3 44 685.7 30 707 28.2C728.3 26.3 749.7 36.7 771.2 37C792.7 37.3 814.3 27.7 835.8 21.5C857.3 15.3 878.7 12.7 889.3 11.3L900 10"
+                    fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#007BFF" stroke-width="2"></path>
+            </svg>
+
+            <svg class="header-svg violet-svg" id="visual" viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                <path
+                    d="M0 14L10.7 16.8C21.3 19.7 42.7 25.3 64.2 25.3C85.7 25.3 107.3 19.7 128.8 17.2C150.3 14.7 171.7 15.3 193 14C214.3 12.7 235.7 9.3 257 7C278.3 4.7 299.7 3.3 321.2 6.5C342.7 9.7 364.3 17.3 385.8 19.5C407.3 21.7 428.7 18.3 450 16.7C471.3 15 492.7 15 514.2 20.3C535.7 25.7 557.3 36.3 578.8 40.2C600.3 44 621.7 41 643 39.2C664.3 37.3 685.7 36.7 707 34C728.3 31.3 749.7 26.7 771.2 28.3C792.7 30 814.3 38 835.8 34.5C857.3 31 878.7 16 889.3 8.5L900 1"
+                    fill="none" stroke-linecap="round" stroke-linejoin="miter" stroke="#BF00FF" stroke-width="2"></path>
+            </svg>
+        </div>
+        <div class="greetings">
+            <span>Salutations</span>
+        </div>
+        <div class="profile_picture">
+            <img class="profile_picture-img" src="./src/images/profile-image.jpg" alt="Picture of the website creator">
+        </div>
+        <div class="welcome">
+            <span class="welcome__text">Welcome to</span>
+        </div>
+        <div class="name">
+            <span class="name__text">RixCrafts Hub</span>
+        </div>
+        <!-- A marquesita line with stats of the different sites -->
+    </header>
+    <nav class="navbar">
+        <ul class="navbar__ul">
+            <li class="portfolio__li">
+                <button type="button" id="portfolio__btn" class="btn portfolio__btn">
+                    Portfolio
+                </button>
+                <div>
+                    <svg viewBox="0 0 50 16" class="btn__svg">
+                        <path class="triangle" d="
+                            M 2 0 
+                            l 46 0 
+                            a 3 3 10 0 1 1 5 
+                            l -21 9 
+                            a 5 5 10 0 1 -5 0 
+                            l -22 -9
+                            A 3 3 10 0 1 2 0
+                        " />
+                    </svg>
+                </div>
+            </li>
+            <li class="blog__li">
+                <button type="button" id="blog__btn" class="btn blog__btn">
+                    Blog
+                </button>
+                <div>
+                    <svg viewBox="0 0 50 16" class="btn__svg">
+                        <path class="triangle" d="
+                            M 2 0 
+                            l 46 0 
+                            a 3 3 10 0 1 1 5 
+                            l -21 9 
+                            a 5 5 10 0 1 -5 0 
+                            l -22 -9 
+                            A 3 3 10 0 1 2 0
+                        " />
+                    </svg>
+                </div>
+            </li>
+            <li class="business__li">
+                <button type="button" id="business__btn" class="btn business__btn">
+                    Business
+                </button>
+                <div>
+                    <svg viewBox="0 0 50 16" class="btn__svg">
+                        <path class="triangle" d="
+                                            M 2 0 l 46 0 
+                                            a 3 3 10 0 1 1 5 
+                                            l -21 9 
+                                            a 5 5 10 0 1 -5 0 
+                                            l -22 -9 
+                                            A 3 3 10 0 1 2 0
+                                        " />
+                    </svg>
+                </div>
+            </li>
+        </ul>
+    </nav>
     <main>
-        <div class="blog-container">
-            <div class="blog-container__inner">
-            </div>
-        </div>
-        <div class="business-container">
-            <div class="business-container__inner">
-                <video id="video-bg" src="resources/Business bg.mp4" autoplay loop></video>
-            </div>
-        </div>
-        <div class="development-container">
-            <div class="iam">
-                <h1>I am</h1>
-            </div>
-            <div class="developer">
-                <h1>A developer:</h1>
-            </div>
-            <div class="entrepreneur">
-                <h2>An entrepreneur</h2>
-            </div>
-            <div class="blogger">
-                <h3>A blogger</h3>
-            </div>
-        </div>
-        <div class="logo-container">
-            <div class="logo-animation"></div>
-            <div class="logo-content">
-                <img src="resources/Logo.png" alt="RixCrafts Multicolor Logo">
-            </div>
-        </div>
+        <section class="section-portfolio">
+
+        </section>
+        <section class="section-blog"></section>
+        <section class="section-business"></section>
     </main>
+    <footer>
+        <!-- Footer Code -->
+    </footer>
 </body>
-<script src="mainLogic.js"></script>
 
 </html>
