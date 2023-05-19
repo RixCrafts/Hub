@@ -18,8 +18,8 @@
 :root {
     /* Color Palette */
     --clr-blue: #007BFF;
-    --clr-violet: rgb(191, 0, 255);
-    --clr-green: rgba(136, 255, 0, 1);
+    --clr-violet: #bf00ff;
+    --clr-green: #88ff00;
     --clr-background: rgb(0, 34, 51);
 
     /* Typography */
@@ -249,29 +249,29 @@ header {
         50px 50px 50px var(--clr-green);
 }
 
-@media screen and (max-width: 600px){
-    header{
+@media screen and (max-width: 600px) {
+    header {
         grid-template-columns: 100vw;
         grid-template-rows: 2rem 8rem 4rem 18rem 10rem 1fr;
     }
 
-    .curve-bg{
+    .curve-bg {
         grid-column: 1;
         grid-row: 1;
         top: 0;
     }
 
-    .greetings{
+    .greetings {
         top: 0.2em;
     }
 
-    .welcome{
+    .welcome {
         grid-column: 1;
         grid-row: 3;
         text-align: center;
     }
 
-    .profile_picture{
+    .profile_picture {
         grid-column: 1;
         grid-row: 4;
         position: relative;
@@ -280,13 +280,13 @@ header {
         width: 70%;
     }
 
-    .name{
+    .name {
         grid-column: 1;
         grid-row: 5;
         z-index: 10;
     }
 
-    .name__text{
+    .name__text {
         font-size: 6rem;
     }
 }
@@ -356,7 +356,11 @@ header {
     transition: all 250ms linear;
 }
 
-.portolio__btn::after {
+.portfolio__btn-icon {
+    display: none;
+}
+
+.portfolio__btn::after {
     content: '';
     pointer-events: none;
     background: var(--clr-blue);
@@ -403,6 +407,26 @@ header {
     opacity: 1;
 }
 
+
+@media screen and (max-width: 600px) {
+    .navbar__ul>li {
+        width: 20%;
+    }
+
+    .portfolio__btn {
+        padding: 0.25em !important;
+    }
+
+    .portfolio__btn-text {
+        display: none;
+    }
+
+    .portfolio__btn-icon {
+        display: block;
+        width: 1.5em;
+        margin: 0 auto;
+    }
+}
 
 
 /* Nav - Blog */
@@ -465,6 +489,26 @@ header {
     opacity: 1;
 }
 
+.blog__btn-icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .blog__btn {
+        padding: 0.25em !important;
+    }
+
+    .blog__btn-text {
+        display: none;
+    }
+
+    .blog__btn-icon {
+        display: block;
+        width: 1.5em;
+        margin: 0 auto;
+    }
+}
+
 /* Nav - Business */
 
 .business__btn {
@@ -523,6 +567,26 @@ header {
 
 .business__btn:is(:hover, :focus)::after {
     opacity: 1;
+}
+
+.business__btn-icon{
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .business__btn {
+        padding: 0.25em !important;
+    }
+
+    .business__btn-text {
+        display: none;
+    }
+
+    .business__btn-icon {
+        display: block;
+        width: 1.5em;
+        margin: 0 auto;
+    }
 }
 
 
