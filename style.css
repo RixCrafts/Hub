@@ -80,6 +80,7 @@ body {
     align-items: center;
 }
 
+
 header {
     position: relative;
     width: 100%;
@@ -252,7 +253,8 @@ header {
 @media screen and (max-width: 600px) {
     header {
         grid-template-columns: 100vw;
-        grid-template-rows: 2rem 8rem 4rem 18rem 10rem 1fr;
+        grid-template-rows: 2rem 8rem 4rem 16em 10rem 1fr;
+        /* overflow-x: hidden; */
     }
 
     .curve-bg {
@@ -263,6 +265,8 @@ header {
 
     .greetings {
         top: 0.2em;
+        width: -moz-fit-content;
+        width: fit-content;
     }
 
     .welcome {
@@ -287,7 +291,7 @@ header {
     }
 
     .name__text {
-        font-size: 6rem;
+        font-size: 5.5em;
     }
 }
 
@@ -329,12 +333,40 @@ header {
 .business__li>div {
     display: flex;
     justify-content: center;
+    position: relative;
+}
+
+.portfolio__li:hover,
+.portfolio__li *:hover,
+.blog__li:hover,
+.blog__li *:hover,
+.business__li:hover
+.business__li *:hover{
+    cursor:pointer;
+}
+
+.arrow-text{
+    position: absolute;
+    top: .05em;
+    font-family: var(--ff-header-welcome);
+    font-weight: var(--fw-bold);
+    color: var(--clr-background);
+    font-size: 1.25em;
+    opacity: 0;
+    transition: opacity 250ms linear;
+}
+
+.portfolio__li:is(:hover, :focus) .arrow-text,
+.blog__li:is(:hover, :focus) .arrow-text,
+.business__li:is(:hover, :focus) .arrow-text {
+    opacity: 1;
 }
 
 .btn__svg {
     width: 50%;
     margin-top: 2px;
 }
+
 
 .triangle {
     stroke-linejoin: round;
@@ -379,6 +411,8 @@ header {
     fill: var(--clr-blue);
 }
 
+
+
 /* Nav - Portfolio : Hover & Focus */
 
 .portfolio__btn::before {
@@ -405,6 +439,10 @@ header {
 
 .portfolio__btn:is(:hover, :focus)::after {
     opacity: 1;
+}
+
+.portfolio__li:is(:hover, :focus) .arrow-text{
+    visibility: visible;
 }
 
 
@@ -586,6 +624,18 @@ header {
         display: block;
         width: 1.5em;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .navbar__ul > li{
+        width: min-content;
+    }
+
+    .portfolio__btn,
+    .blog__btn,
+    .business__btn {
+        width: max-content;
     }
 }
 
